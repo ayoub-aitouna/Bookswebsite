@@ -1,0 +1,96 @@
+:root {
+  --acnt-clr: #f8bea5;
+}
+.wrapper {
+  position: relative;
+  height: 100vh;
+  display: grid;
+  z-index: 0;
+  grid-template-columns: 64% auto;
+}
+
+.right {
+  background-color: rebeccapurple;
+  cursor: pointer;
+}
+.left {
+  padding: 0 10vw;
+  padding-top: 18vh;
+  display: flex;
+  width: 100%;
+  gap: 1rem;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background-color: #f7f7ff;
+}
+.left h1 {
+  width: 94%;
+  font-size: 4.7rem;
+}
+
+.lister {
+  display: inline-block;
+  position: relative;
+  margin-right: 1rem;
+  transform: rotate(-30deg);
+}
+.lister::after {
+  content: "";
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  width: 5rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--acnt-clr);
+  z-index: -1;
+}
+.left p {
+  font-size: 2rem;
+}
+.imgContainer {
+  top: 21vh;
+  right: 25vw;
+  position: absolute;
+  width: 20rem;
+  height: 30rem;
+}
+.imgContainer img {
+  width: 100%;
+  height: 100%;
+}
+
+.input {
+  display: grid;
+  grid-template-columns: 75% auto;
+  place-items: center;
+  width: 120%;
+  height: 5rem;
+  z-index: 2;
+  background-color: #fff;
+  border-radius: 10rem;
+  padding: 0 0.61rem;
+  overflow: hidden;
+}
+.input input {
+  border: none;
+  background: none;
+  color: black;
+  width: 100%;
+  height: 100%;
+  padding: 0 0.61rem;
+}
+.input input:focus {
+  outline: none;
+}
+
+.input button {
+  border: none;
+  background: var(--acnt-clr);
+  height: 80%;
+  width: 100%;
+  border-radius: 10rem;
+  cursor: pointer;
+}
